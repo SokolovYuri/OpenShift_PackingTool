@@ -1,0 +1,29 @@
+apiVersion: operator.openshift.io/v1alpha1
+kind: ImageContentSourcePolicy
+metadata:
+  labels:
+    operators.openshift.org/catalog: "true"
+  name: community-operator-index-0
+spec:
+  repositoryDigestMirrors:
+  - mirrors:
+    - registry.crgcsa.local:5000/olm/openshift-community-operators/argocd-operator
+    source: quay.io/openshift-community-operators/argocd-operator
+  - mirrors:
+    - registry.crgcsa.local:5000/olm/redhat-cop/argocd-operator
+    source: quay.io/redhat-cop/argocd-operator
+  - mirrors:
+    - registry.crgcsa.local:5000/olm/argoprojlabs/argocd-operator
+    source: quay.io/argoprojlabs/argocd-operator
+  - mirrors:
+    - registry.crgcsa.local:5000/olm/jmckind/argocd-operator
+    source: quay.io/jmckind/argocd-operator
+  - mirrors:
+    - registry.crgcsa.local:5000/olm/argoproj/argocd
+    source: quay.io/argoproj/argocd
+  - mirrors:
+    - registry.crgcsa.local:5000/olm/kubebuilder/kube-rbac-proxy
+    source: gcr.io/kubebuilder/kube-rbac-proxy
+
+# add argo-cd Redis
+## don't forget to add ado-cd binary to bastion

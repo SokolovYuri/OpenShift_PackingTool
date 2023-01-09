@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: csi-driver-operator
+  namespace: openshift-marketplace
+spec:
+  image: registry.crgcsa.local:5000/hpestorage/hpe-csi-operator-index:4.10
+  sourceType: grpc

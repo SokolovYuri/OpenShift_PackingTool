@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: argo-cd
+  namespace: openshift-marketplace
+spec:
+  image: registry.crgcsa.local:5000/argo-cd/argo-cd-index:4.10
+  sourceType: grpc
