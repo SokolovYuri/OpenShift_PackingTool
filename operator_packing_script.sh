@@ -51,6 +51,7 @@ for image in $source;do
     local_source=$(printf '%s' "$image" | sed "s/$remote_registry/$registry:5000/g")
     skopeo copy -a --dest-tls-verify=false docker://$image docker://$local_source
     echo docker://$local_source >> images.txt
+    echo print here!!!
 done
 
 echo "Skopeo copy the images from the chosen version into the internal registry."
